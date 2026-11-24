@@ -6,6 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><title>Calabash - Printing Business Manager</title>
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Calabash - Printing Business Manager_files/css2" rel="stylesheet">
 <style>
 :root{--navy:#111114;--purple:#9f1239;--violet:#be123c;--yellow:#fda4af;--bg:#ffffff;--surface:#ffffff;--surface-soft:#f7f7f8;--ink:#18181b;--muted:#71717a;--line:#e4e4e7;--green:#16833d;--red:#b42318;--crimson:#9f1239;--crimson-soft:#fff1f2}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px Arial,Helvetica,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}
@@ -589,79 +590,77 @@ input,select,textarea { font-size:16px !important; }
   font-weight: 500 !important;
 }
 </style>
-
-<style id="calabash-quotation-help-upgrade">
-/* Quotation calculator hierarchy: service selector across the top, work areas below. */
-.calculator-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
-.calculator-layout .service-panel .servicegrid{grid-template-columns:repeat(auto-fit,minmax(125px,1fr));}
-.calculator-bottom{display:grid;grid-template-columns:minmax(280px,.92fr) minmax(360px,1.08fr);gap:14px;align-items:start}
-.calculator-bottom>.panel{min-width:0;height:100%}
-.calculator-bottom .quotation-panel .pad{display:flex;flex-direction:column;gap:3px}
-.calculator-bottom .quotation-panel .tablewrap{margin-top:10px}
-.calculator-bottom .quotation-panel .line{margin-top:10px}
-.help-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch}
-.help-grid .panel{height:100%}.help-grid ol,.help-grid ul{padding-left:22px;margin:0}.help-grid li{margin:0 0 10px;padding-left:3px}.help-grid li:last-child{margin-bottom:0}.help-grid p{margin:0 0 12px}.help-grid a:not(.btn){color:#7657e8;font-weight:700}.help-support-card{border-color:#e5dafa!important}
-@media(max-width:900px){.calculator-bottom{grid-template-columns:1fr 1fr}}
-@media(max-width:720px){.calculator-bottom,.help-grid{grid-template-columns:1fr}.calculator-layout{gap:11px}.calculator-layout .service-panel .servicegrid{grid-template-columns:repeat(2,minmax(0,1fr))}.calculator-bottom .quotation-panel .tablewrap{max-width:100%}}
-body.dark .help-grid a:not(.btn){color:#c5b4ff}
-.service-panel>h3{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.service-collapse-toggle{min-height:34px;padding:6px 12px;font-size:12px;white-space:nowrap}
-.service-panel.is-collapsed .service-panel-content{display:none}
-.service-panel.is-collapsed>h3{border-bottom:0}
-@media(max-width:480px){.service-panel>h3{align-items:flex-start;flex-direction:column}.service-collapse-toggle{align-self:flex-end}}
-</style>
-
-<link rel="manifest" href="./manifest.json">
-<meta name="theme-color" content="#2563eb">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Calabash">
-<link rel="apple-touch-icon" href="./icons/icon-192.png">
-
 </head><body>
 <header><div class="brand"><div><h1 id="brandTitle">CALABASH</h1><small>Smart printing, seamless control.</small></div></div><div class="headright"><select id="businessSwitch" aria-label="Business profile"><option value="n5q6gwgfmwt43vsi" selected="">KOBIART STUDIO</option></select><span id="currentUser" style="font-size:12px">Owner · Owner</span><button class="icon-action" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"><span aria-hidden="true">☾</span></button><button class="icon-action logout-icon" id="logoutBtn" type="button" aria-label="Log out" title="Log out"><span aria-hidden="true">↪</span></button></div></header>
 <div class="shell"><aside class="no-print">
 <button type="button" class="sidebar-toggle" id="sidebarToggle" aria-label="Collapse sidebar" title="Collapse sidebar"><span class="toggle-chevron" aria-hidden="true">‹</span><span class="toggle-label">Collapse menu</span></button>
 <div class="navlabel">Workspace</div><button class="active" data-page="dashboard">▦ Dashboard</button><button data-page="calculator">▣ Price Calculator</button><button data-page="services">⚙ Services &amp; Materials</button><button data-page="customers">♙ Customers</button>
 <div class="navlabel">Documents &amp; Accounts</div><button data-page="quotations">▤ Quotations</button><button data-page="invoices">▧ Invoices</button><button data-page="receipts">▤ Receipts</button><button data-page="payments">₵ Sales &amp; Payments</button><button data-page="expenses">− Expenses</button><button data-page="reports">▥ Reports</button>
-<div class="navlabel">Administration</div><button data-page="users">♙ User Management</button><button data-page="business">▣ Business Profile</button><button data-page="backup">⬇ Settings &amp; Backup</button><button data-page="help">❔ Help &amp; Support</button><div class="navbottom">CALABASH</div>
+<div class="navlabel">Administration</div><button data-page="users">♙ User Management</button><button data-page="business">▣ Business Profile</button><button data-page="backup">⬇ Settings &amp; Backup</button><div class="navbottom">CALABASH</div>
 </aside><main>
 <section id="dashboard" class="page active"><div class="pagehead"><div><h2>Dashboard</h2><div class="muted">A quick overview of this printing business.</div></div><button class="btn primary no-print" onclick="go('calculator')">＋ New Calculation</button></div>
 <div class="grid stats"><div class="stat"><span>Invoices</span><strong id="dInvoices">1</strong></div><div class="stat"><span>Payments received</span><strong id="dPaid">GH₵ 0.00</strong></div><div class="stat"><span>Outstanding balance</span><strong id="dBalance">GH₵ 67.50</strong></div><div class="stat"><span>Expenses recorded</span><strong id="dExpenses">GH₵ 0.00</strong></div></div>
 <div class="grid cols"><div class="panel"><h3>Recent Invoices</h3><div class="pad" id="recentInvoices"><div class="line"><span>INV-00001 · Patience</span><b>GH₵ 67.50</b></div></div></div><div class="panel"><h3>Quick Actions</h3><div class="pad"><div class="toolbar"><button class="btn primary" onclick="go('calculator')">Price Calculator</button><button class="btn secondary" onclick="go('invoices')">Create Invoice</button><button class="btn secondary" onclick="go('payments')">Record Payment</button><button class="btn secondary" onclick="go('expenses')">Add Expense</button></div><div class="notice">This is an offline, browser-based version. Data is stored in this Chrome profile on this computer. Export backups regularly.</div></div></div></div></section>
-<section id="calculator" class="page">
-<div class="pagehead"><div><h2>Price Calculator</h2><div class="muted">Choose a service first, enter the job details, then build and save your quotation.</div></div></div>
-<div class="calculator-layout">
-  <div class="panel service-panel" id="servicePanel"><h3><span>① Select Service</span><button type="button" class="btn secondary service-collapse-toggle" id="serviceCollapseToggle" aria-expanded="true">Collapse ▲</button></h3><div class="pad service-panel-content"><div id="serviceGrid" class="servicegrid"></div></div></div>
-  <div class="calculator-bottom">
-    <div class="panel job-panel"><h3>② Job Details</h3><div class="pad"><div class="rate">Rate: <strong id="rateDisplay">GH₵ 0.00</strong><div class="small" id="rateUnit">per sq. ft.</div></div><div class="total live-calc-total"><span>Calculated total · updates automatically</span><strong id="calcTotal">GH₵ 0.00</strong></div>
-    <div id="dimensionFields"><div class="row"><div><label>Width</label><input id="width" type="number" min="0" step="any"></div><div><label>Width unit</label><select id="widthUnit"><option value="ft">Feet</option><option value="in">Inches</option><option value="cm">Centimetres</option><option value="m">Metres</option></select></div></div><div class="row"><div><label>Height</label><input id="height" type="number" min="0" step="any"></div><div><label>Height unit</label><select id="heightUnit"><option value="ft">Feet</option><option value="in">Inches</option><option value="cm">Centimetres</option><option value="m">Metres</option></select></div></div></div>
-    <label>Quantity</label><input id="quantity" type="number" min="1" step="1" value="1"><label>Job notes</label><input id="jobNotes" placeholder="Optional details"><div class="line"><span>Area per piece</span><b id="areaDisplay">—</b></div><div class="line"><span>Minimum charge</span><b id="minDisplay">GH₵ 0.00</b></div><button class="btn primary full" id="addQuoteItem">＋ Add to Quotation</button></div></div>
-    <div class="panel quotation-panel"><h3>③ Quotation</h3><div class="pad"><label>Customer</label><input id="quoteCustomer" placeholder="Customer name"><label>Phone</label><input id="quotePhone" placeholder="Phone number"><div class="tablewrap"><table class="data"><thead><tr><th>Job</th><th>Qty</th><th>Amount</th><th></th></tr></thead><tbody id="cartRows"><tr><td colspan="4" class="empty">No items added.</td></tr></tbody></table></div><label>Discount (currency)</label><input id="quoteDiscount" type="number" min="0" value="0"><div class="line"><b>Quotation total</b><b id="quoteTotal">GH₵ 0.00</b></div><button class="btn primary full" id="saveQuotation">Save Quotation</button><button class="btn secondary full" id="clearQuote">Clear</button></div></div>
-  </div>
-</div></section>
+<section id="calculator" class="page"><div class="pagehead"><div><h2>Price Calculator</h2><div class="muted">Select a service, enter measurements and add the job to a quotation.</div></div></div><div class="grid calcgrid">
+<div class="panel"><h3>Select Service</h3><div class="pad"><div id="serviceGrid" class="servicegrid"></div></div></div>
+<div class="panel"><h3>Job Details</h3><div class="pad"><div class="rate">Rate: <strong id="rateDisplay">GH₵ 0.00</strong><div class="small" id="rateUnit">per sq. ft.</div></div>
+<div id="dimensionFields"><div class="row"><div><label>Width</label><input id="width" type="number" min="0" step="any"></div><div><label>Width unit</label><select id="widthUnit"><option value="ft">Feet</option><option value="in">Inches</option><option value="cm">Centimetres</option><option value="m">Metres</option></select></div></div><div class="row"><div><label>Height</label><input id="height" type="number" min="0" step="any"></div><div><label>Height unit</label><select id="heightUnit"><option value="ft">Feet</option><option value="in">Inches</option><option value="cm">Centimetres</option><option value="m">Metres</option></select></div></div></div>
+<label>Quantity</label><input id="quantity" type="number" min="1" step="1" value="1"><label>Job notes</label><input id="jobNotes" placeholder="Optional details"><div class="line"><span>Area per piece</span><b id="areaDisplay">—</b></div><div class="line"><span>Minimum charge</span><b id="minDisplay">GH₵ 0.00</b></div><button class="btn secondary full" id="calcBtn">Calculate Price</button><div class="total"><span>Calculated total</span><strong id="calcTotal">GH₵ 0.00</strong></div><button class="btn primary full" id="addQuoteItem">＋ Add to Quotation</button></div></div>
+<div class="panel"><h3>Current Quotation</h3><div class="pad"><label>Customer</label><input id="quoteCustomer" placeholder="Customer name"><label>Phone</label><input id="quotePhone" placeholder="Phone number"><div class="tablewrap"><table class="data"><thead><tr><th>Job</th><th>Qty</th><th>Amount</th><th></th></tr></thead><tbody id="cartRows"><tr><td colspan="4" class="empty">No items added.</td></tr></tbody></table></div><label>Discount (currency)</label><input id="quoteDiscount" type="number" min="0" value="0"><div class="line"><b>Quotation total</b><b id="quoteTotal">GH₵ 0.00</b></div><button class="btn primary full" id="saveQuotation">Save Quotation</button><button class="btn secondary full" id="clearQuote">Clear</button></div></div></div></section>
 <section id="services" class="page"><div class="pagehead"><div><h2>Services &amp; Materials</h2><div class="muted">Set each business's own rates and minimum charges.</div></div></div><div class="panel"><h3>Add / Edit Service</h3><div class="pad"><input type="hidden" id="serviceId"><div class="formgrid"><div><label>Service name</label><input id="serviceName" placeholder="Banner Printing"></div><div><label>Category</label><input id="serviceCategory" placeholder="Large format"></div><div><label>Pricing method</label><select id="serviceType"><option value="area">Per square foot</option><option value="unit">Per item / page</option><option value="fixed">Fixed job price</option></select></div><div><label>Rate</label><input id="serviceRate" type="number" min="0" step=".01" value="0"></div><div><label>Minimum charge</label><input id="serviceMin" type="number" min="0" step=".01" value="0"></div><div><label>Unit name</label><input id="serviceUnit" value="piece" placeholder="page, piece, set"></div></div><div class="toolbar"><button class="btn primary" id="saveService">Save Service</button><button class="btn secondary" id="clearService">Clear Form</button></div></div></div><div class="tablewrap" style="margin-top:14px"><table class="data"><thead><tr><th>Service</th><th>Category</th><th>Method</th><th>Rate</th><th>Minimum</th><th>Actions</th></tr></thead><tbody id="serviceRows"></tbody></table></div></section>
 <section id="customers" class="page"><div class="pagehead"><div><h2>Customers</h2><div class="muted">Customer list built from saved quotations and invoices.</div></div></div><div class="tablewrap"><table class="data"><thead><tr><th>Name</th><th>Phone</th><th>Invoices</th><th>Total invoiced</th><th>Outstanding</th></tr></thead><tbody id="customerRows"></tbody></table></div></section>
 <section id="quotations" class="page"><div class="pagehead"><div><h2>Quotations</h2><div class="muted">Saved estimates can be converted into invoices.</div></div></div><div class="tablewrap"><table class="data"><thead><tr><th>Quote No.</th><th>Date</th><th>Customer</th><th>Total</th><th>Actions</th></tr></thead><tbody id="quotationRows"></tbody></table></div></section>
-<section id="invoices" class="page"><div class="pagehead"><div><h2>Invoices</h2><div class="muted">Create invoices, track balances and print duplicate A4 copies.</div></div></div><div class="panel no-print"><h3>Create Invoice</h3><div class="pad"><div class="formgrid"><div><label>Customer name</label><input id="invoiceCustomer" placeholder="Customer name"></div><div><label>Service / Description</label><input id="invoiceDescription" placeholder="e.g. Banner printing"></div><div><label>Price (GH₵)</label><input id="invoicePrice" type="number" min="0.01" step="0.01" placeholder="0.00"></div></div><button class="btn primary" id="manualInvoice" style="margin-top:12px">＋ Create Invoice</button></div></div><div class="tablewrap"><table class="data"><thead><tr><th>Invoice No.</th><th>Date</th><th>Customer</th><th>Total</th><th>Paid</th><th>Balance</th><th>Status</th><th>Actions</th></tr></thead><tbody id="invoiceRows"></tbody></table></div></section>
+<section id="invoices" class="page"><div class="pagehead"><div><h2>Invoices</h2><div class="muted">Create invoices, track balances and print duplicate A4 copies.</div></div></div><div class="panel no-print"><h3>Create Invoice</h3><div class="pad"><div class="formgrid"><div><label>Customer name</label><input id="invoiceCustomer" placeholder="Customer name"></div><div><label>Service / Description</label><input id="invoiceDescription" placeholder="e.g. Banner printing"></div><div><label>Price (GH₵)</label><input id="invoicePrice" type="number" min="0.01" step="0.01" placeholder="0.00"></div></div><button class="btn primary" id="manualInvoice" style="margin-top:12px">＋ Create Invoice</button></div></div><div class="notice">A4 invoice printing produces one full-page invoice per sheet.</div><div class="tablewrap"><table class="data"><thead><tr><th>Invoice No.</th><th>Date</th><th>Customer</th><th>Total</th><th>Paid</th><th>Balance</th><th>Status</th><th>Actions</th></tr></thead><tbody id="invoiceRows"></tbody></table></div></section>
 <section id="receipts" class="page"><div class="pagehead"><div><h2>Receipts</h2><div class="muted">Every recorded payment creates a receipt that can be printed.</div></div></div><div class="tablewrap"><table class="data"><thead><tr><th>Receipt No.</th><th>Date</th><th>Customer</th><th>Invoice</th><th>Amount</th><th>Method</th><th>Actions</th></tr></thead><tbody id="receiptRows"></tbody></table></div></section>
 <section id="payments" class="page"><div class="pagehead"><div><h2>Sales &amp; Payments</h2><div class="muted">Record full or partial payments against an invoice.</div></div></div><div class="panel"><h3>Record Payment</h3><div class="pad"><div class="formgrid"><div><label>Invoice</label><select id="paymentInvoice"></select></div><div><label>Amount received</label><input id="paymentAmount" type="number" min=".01" step=".01"></div><div><label>Payment method</label><select id="paymentMethod"><option>Cash</option><option>Mobile Money</option><option>Bank Transfer</option><option>Card</option><option>Other</option></select></div></div><label>Payment reference / note</label><input id="paymentNote" placeholder="Optional transaction reference"><button class="btn primary" id="recordPayment" style="margin-top:12px">Record Payment &amp; Generate Receipt</button></div></div><div class="tablewrap" style="margin-top:14px"><table class="data"><thead><tr><th>Date</th><th>Invoice</th><th>Customer</th><th>Amount</th><th>Method</th><th>Reference</th></tr></thead><tbody id="paymentRows"></tbody></table></div></section>
 <section id="expenses" class="page"><div class="pagehead"><div><h2>Expenses</h2><div class="muted">Record business operating expenses.</div></div></div><div class="panel"><h3>Add Expense</h3><div class="pad"><div class="formgrid"><div><label>Description</label><input id="expenseDesc" placeholder="Paper purchase"></div><div><label>Category</label><input id="expenseCategory" placeholder="Materials"></div><div><label>Amount</label><input id="expenseAmount" type="number" min=".01" step=".01"></div><div><label>Date</label><input id="expenseDate" type="date"></div><div><label>Paid by</label><select id="expenseMethod"><option>Cash</option><option>Mobile Money</option><option>Bank</option><option>Other</option></select></div></div><button class="btn primary" id="saveExpense" style="margin-top:12px">Save Expense</button></div></div><div class="tablewrap" style="margin-top:14px"><table class="data"><thead><tr><th>Date</th><th>Description</th><th>Category</th><th>Amount</th><th>Method</th><th></th></tr></thead><tbody id="expenseRows"></tbody></table></div></section>
 <section id="reports" class="page"><div class="pagehead"><div><h2>Reports</h2><div class="muted">Summary of invoices, payments and expenses for the selected business.</div></div></div><div class="grid stats"><div class="stat"><span>Total invoiced</span><strong id="rInvoiced">GH₵ 0.00</strong></div><div class="stat"><span>Payments received</span><strong id="rReceived">GH₵ 0.00</strong></div><div class="stat"><span>Outstanding</span><strong id="rOutstanding">GH₵ 0.00</strong></div><div class="stat"><span>Expenses</span><strong id="rExpenses">GH₵ 0.00</strong></div></div><div class="panel"><h3>Business Summary</h3><div class="pad" id="reportSummary"></div></div></section>
-<section id="users" class="page"><div class="pagehead"><div><h2>User Management</h2><div class="muted">Create local staff profiles and assign access roles.</div></div></div><div class="panel"><h3>Add User</h3><div class="pad"><div class="formgrid"><div><label>Full name</label><input id="newUserName"></div><div><label>Username</label><input id="newUsername"></div><div><label>4–8 digit PIN</label><input id="newUserPin" type="password" maxlength="8"></div><div><label>Role</label><select id="newUserRole"><option>Manager</option><option>Cashier</option><option>Staff</option><option>Owner</option></select></div></div><button class="btn primary" id="addUser" style="margin-top:12px">Add User</button></div></div><div class="panel user-editor" id="userEditor" hidden style="margin-top:14px"><h3 id="userEditorTitle">Edit User Details</h3><div class="pad"><input type="hidden" id="editUserId"><div class="formgrid"><div><label>Full name</label><input id="editUserName"></div><div><label>Username</label><input id="editUsername"></div><div><label>New 4–8 digit PIN</label><input id="editUserPin" type="password" maxlength="8" placeholder="Enter new PIN"></div><div><label>Access role</label><select id="editUserRole"><option>Owner</option><option>Manager</option><option>Cashier</option><option>Staff</option></select></div></div><div class="toolbar" style="margin-top:14px"><button class="btn primary" id="saveUserEdit">Save Changes</button><button class="btn secondary" id="cancelUserEdit">Cancel</button></div></div></div><div class="tablewrap" style="margin-top:14px"><table class="data"><thead><tr><th>Name</th><th>Username</th><th>Role</th><th>Actions</th></tr></thead><tbody id="userRows"></tbody></table></div></section>
+<section id="users" class="page"><div class="pagehead"><div><h2>User Management</h2><div class="muted">Create local staff profiles and assign access roles.</div></div></div><div class="notice">Local PIN access is a convenience feature, not strong security. Anyone with access to this computer/browser profile may be able to access or modify local app data.</div><div class="panel"><h3>Add User</h3><div class="pad"><div class="formgrid"><div><label>Full name</label><input id="newUserName"></div><div><label>Username</label><input id="newUsername"></div><div><label>4–8 digit PIN</label><input id="newUserPin" type="password" maxlength="8"></div><div><label>Role</label><select id="newUserRole"><option>Manager</option><option>Cashier</option><option>Staff</option></select></div></div><button class="btn primary" id="addUser" style="margin-top:12px">Add User</button></div></div><div class="tablewrap" style="margin-top:14px"><table class="data"><thead><tr><th>Name</th><th>Username</th><th>Role</th><th>Actions</th></tr></thead><tbody id="userRows"></tbody></table></div></section>
 <section id="business" class="page"><div class="pagehead"><div><h2>Business Profile</h2><div class="muted">Manage business identity and create separate business profiles.</div></div></div><div class="panel"><h3>Edit Current Business</h3><div class="pad"><div class="formgrid"><div><label>Business name</label><input id="bName"></div><div><label>Phone</label><input id="bPhone"></div><div><label>WhatsApp</label><input id="bWhatsapp"></div><div><label>Email</label><input id="bEmail"></div><div><label>Address</label><input id="bAddress"></div><div><label>Currency code / symbol</label><input id="bCurrency" placeholder="GH₵"></div></div><button class="btn primary" id="saveBusiness" style="margin-top:12px">Save Business Profile</button></div></div><div class="panel" style="margin-top:14px"><h3>Add Another Printing Business</h3><div class="pad"><div class="row"><input id="newBusinessName" placeholder="New printing press name"><button class="btn secondary" id="addBusiness">Create Business Profile</button></div><p class="small">Each business profile has its own services, customers, quotations, invoices, payments, expenses and users on this computer.</p></div></div></section>
 <section id="backup" class="page"><div class="pagehead"><div><h2>Settings &amp; Backup</h2><div class="muted">Export all businesses and records or restore a backup.</div></div></div><div class="panel"><h3>Backup &amp; Restore</h3><div class="pad"><p>Export a backup regularly. The backup contains business profiles, service rates, users, invoices, receipts and expenses.</p><div class="toolbar"><button class="btn primary" id="exportBackup">Export Backup</button><label class="btn secondary" style="display:inline-flex;align-items:center;cursor:pointer;margin:0">Import Backup<input id="importBackup" type="file" accept=".json,application/json" style="display:none"></label></div><div class="notice">This app stores information in local browser storage. It does not sync across devices or provide cloud hosting. Keep backup copies in a safe place.</div></div></div></section>
-<section id="help" class="page"><div class="pagehead"><div><h2>Help &amp; Support</h2><div class="muted">A quick guide to using Calabash Printing Business Manager.</div></div><a class="btn primary" href="mailto:emmakit34@gmail.com?subject=Calabash%20App%20Support">✉ Contact Support</a></div>
-<div class="help-grid">
-<div class="panel"><h3>Getting started</h3><div class="pad"><ol><li><b>Sign in:</b> Choose your user profile and enter your PIN.</li><li><b>Set up your business:</b> Open Business Profile to enter your business name, contact details and address.</li><li><b>Set your prices:</b> Go to Services &amp; Materials to add services and set rates and minimum charges.</li><li><b>Keep records safe:</b> Use Settings &amp; Backup to export a backup regularly.</li></ol></div></div>
-<div class="panel"><h3>Create a quotation</h3><div class="pad"><ol><li>Open Price Calculator.</li><li>Select a service from the full-width Select Service panel at the top.</li><li>Enter the measurements (where required), quantity and optional job notes under Job Details.</li><li>The price updates automatically as you enter measurements and quantity. Review the calculated total at the top of Job Details, then select Add to Quotation.</li><li>Enter the customer's name and phone number, add any discount, and review the quotation on the right.</li><li>Select Save Quotation. Your saved quotation will appear under Quotations.</li></ol></div></div>
-<div class="panel"><h3>Invoices, receipts &amp; payments</h3><div class="pad"><ul><li><b>Quotations:</b> View saved quotations and convert a quotation into an invoice.</li><li><b>Invoices:</b> Print an invoice and track the amount paid and outstanding balance.</li><li><b>Receipts:</b> Record and print receipts for payments received.</li><li><b>Sales &amp; Payments:</b> Review payment records and balances.</li></ul></div></div>
-<div class="panel"><h3>Customers, expenses &amp; reports</h3><div class="pad"><ul><li><b>Customers:</b> Keep customer contact details for your business records.</li><li><b>Expenses:</b> Record business expenses to help track spending.</li><li><b>Reports:</b> Review business activity and financial summaries.</li><li><b>User Management:</b> Manage staff access and roles (owner permissions may be required).</li></ul></div></div>
-<div class="panel"><h3>Appearance &amp; navigation</h3><div class="pad"><ul><li>Use the theme control in the top bar to switch between light and dark appearance.</li><li>Use Collapse menu in the sidebar to make more room for your work. Select Expand menu to restore it.</li><li>Use the business selector to switch businesses; you will be asked to sign in again.</li><li>Select Logout when you are finished using the app.</li></ul></div></div>
-<div class="panel help-support-card"><h3>Need more help?</h3><div class="pad"><p>For help, questions or to report a problem with Calabash, send an email to our support address. Include a short description of what happened and the page you were using.</p><p><b>Support email:</b> <a href="mailto:emmakit34@gmail.com">emmakit34@gmail.com</a></p><a class="btn primary full" href="mailto:emmakit34@gmail.com?subject=Calabash%20App%20Support&amp;body=Hello%20Calabash%20Support%2C%0A%0AI%20need%20help%20with%3A%20">✉ Email Calabash Support</a></div></div>
-</div></section>
 <section id="printstage" class="page"></section>
 </main></div><footer><span>Offline Printing Business Manager</span><span id="footerBusiness">KOBIART STUDIO</span></footer>
+
+<div id="firstSetup" style="display:none;position:fixed;inset:0;z-index:30;overflow:auto;background:linear-gradient(135deg,#f8f9fc,#fff0f4);padding:28px 16px">
+  <div style="max-width:900px;margin:0 auto;background:#fff;border:1px solid #e6e8ee;border-radius:18px;box-shadow:0 18px 55px #252b381c;overflow:hidden">
+    <div style="padding:25px 28px;background:linear-gradient(110deg,#a5123f,#d64b70);color:#fff">
+      <div style="font-size:12px;font-weight:800;letter-spacing:1.4px;opacity:.9">CALABASH · FIRST-TIME SETUP</div>
+      <h1 style="margin:8px 0 4px;font-size:27px">Set up your printing business</h1>
+      <p style="margin:0;opacity:.9">Add your business details and create your own service list and prices.</p>
+    </div>
+    <form id="firstSetupForm" style="padding:24px 28px">
+      <h2 style="font-size:19px;margin:0 0 5px">1. Business information</h2>
+      <p class="muted">These details can be changed later in Business Profile.</p>
+      <div class="formgrid">
+        <div><label for="setupBusiness">Business name *</label><input id="setupBusiness" required placeholder="e.g. Bright Prints"></div>
+        <div><label for="setupPhone">Phone number</label><input id="setupPhone" placeholder="Business phone"></div>
+        <div><label for="setupWhatsapp">WhatsApp</label><input id="setupWhatsapp" placeholder="WhatsApp number"></div>
+        <div><label for="setupEmail">Email</label><input id="setupEmail" type="email" placeholder="Business email"></div>
+        <div><label for="setupCurrency">Currency symbol/code</label><input id="setupCurrency" value="GH₵" placeholder="GH₵"></div>
+        <div><label for="setupAddress">Business address</label><input id="setupAddress" placeholder="Business address"></div>
+      </div>
+      <hr style="border:0;border-top:1px solid #eceef1;margin:24px 0">
+      <h2 style="font-size:19px;margin:0 0 5px">2. Owner account</h2>
+      <p class="muted">Create the owner profile and PIN used to sign in on this device.</p>
+      <div class="formgrid">
+        <div><label for="setupOwner">Owner's name *</label><input id="setupOwner" required placeholder="Your name"></div>
+        <div><label for="setupUsername">Username *</label><input id="setupUsername" required autocomplete="username" placeholder="Choose a username"></div>
+        <div><label for="setupPin">Create PIN *</label><input id="setupPin" required type="password" inputmode="numeric" minlength="4" placeholder="At least 4 digits"></div>
+      </div>
+      <hr style="border:0;border-top:1px solid #eceef1;margin:24px 0">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div><h2 style="font-size:19px;margin:0 0 5px">3. Set up your services and prices</h2><p class="muted" style="margin:0">Start with a blank list. Add only the services your business offers.</p></div>
+        <button type="button" class="btn secondary" id="setupAddService">＋ Add service</button>
+      </div>
+      <div id="setupServices" style="display:grid;gap:10px;margin-top:15px"></div>
+      <div class="notice" style="margin-top:16px">You can finish setup with no services and add them later. Prices can also be edited any time under Services &amp; Materials.</div>
+      <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:22px">
+        <button type="submit" class="btn primary" style="min-width:170px">Finish Setup →</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 <div id="login" style="display: none;"><div class="box"><h2>Welcome to Calabash</h2><p class="login-subtitle">PRINTING BUSINESS MANAGER</p><p class="muted">Choose a user profile and enter the PIN.</p><label>User profile</label><select id="loginUser"><option value="g048exq0mwt43vsi">Owner (owner)</option><option value="bsr8v1zumwt6ub43">KWABENA DANSOH (KOBI)</option></select><label>PIN</label><input id="loginPin" type="password" placeholder="Enter PIN"><button class="btn primary full" id="loginBtn">Sign In</button><p class="small">First-time default: Owner profile, PIN 1234. Change this after signing in.</p></div></div>
 <script>
 const STORE='kobiart_print_manager_v3';
@@ -671,7 +670,8 @@ const uid=()=>Math.random().toString(36).slice(2,10)+Date.now().toString(36);
 const today=()=>new Date().toISOString().slice(0,10);
 function newBusiness(name){return {id:uid(),profile:{name,phone:'',whatsapp:'',email:'',address:'',currency:'GH₵'},services:seedServices.map(a=>({id:uid(),name:a[0],category:a[1],type:a[2],rate:a[3],min:a[4],unit:a[5],emoji:a[6]})),quotes:[],invoices:[],receipts:[],expenses:[],users:[{id:uid(),name:'Owner',username:'owner',pin:'1234',role:'Owner'}]}}
 let db;try{db=JSON.parse(localStorage.getItem(STORE))}catch(e){}
-if(!db||!Array.isArray(db.businesses)){let b=newBusiness('Kobiart Studio');db={businesses:[b],activeBusiness:b.id,activeUser:null}}
+const calabashFreshInstall=!db||!Array.isArray(db.businesses);
+if(calabashFreshInstall){let b=newBusiness('');b.services=[];db={businesses:[b],activeBusiness:b.id,activeUser:null,setupComplete:false}}
 let biz=()=>db.businesses.find(x=>x.id===db.activeBusiness)||db.businesses[0], user=()=>biz().users.find(x=>x.id===db.activeUser)||null, cart=[],selected=null,calcCache=0;
 function save(){localStorage.setItem(STORE,JSON.stringify(db))}
 function cur(){return biz().profile.currency||'GH₵'}
@@ -706,7 +706,7 @@ function deleteService(id){if(!requireOwner())return;if(confirm('Delete this ser
 function toFeet(v,u){return u==='in'?v/12:u==='cm'?v/30.48:u==='m'?v*3.280839895:v}
 function updateCalc(){let s=biz().services.find(x=>x.id===selected)||biz().services[0];if(!s)return;selected=s.id;document.getElementById('rateDisplay').textContent=money(s.rate);document.getElementById('rateUnit').textContent=s.type==='area'?'per sq. ft.':s.type==='unit'?'per '+s.unit:'per job';document.getElementById('dimensionFields').classList.toggle('hidden',s.type!=='area');let q=Math.max(1,+document.getElementById('quantity').value||1),area=0,total=0;if(s.type==='area'){let w=+document.getElementById('width').value||0,h=+document.getElementById('height').value||0;area=toFeet(w,document.getElementById('widthUnit').value)*toFeet(h,document.getElementById('heightUnit').value);total=Math.max(area*s.rate,s.min)*q;document.getElementById('areaDisplay').textContent=area?area.toFixed(3)+' sq. ft.':'—'}else if(s.type==='unit')total=Math.max(s.rate,s.min)*q;else total=s.rate*q;calcCache=total;document.getElementById('minDisplay').textContent=money(s.min);document.getElementById('calcTotal').textContent=money(total)}
 function renderCalc(){renderServices();updateCalc()}
-['width','height','widthUnit','heightUnit','quantity'].forEach(id=>document.getElementById(id).addEventListener('input',updateCalc));
+['width','height','widthUnit','heightUnit','quantity'].forEach(id=>document.getElementById(id).addEventListener('input',updateCalc));document.getElementById('calcBtn').onclick=updateCalc;
 document.getElementById('addQuoteItem').onclick=()=>{let s=biz().services.find(x=>x.id===selected);if(!s)return;let q=Math.max(1,+document.getElementById('quantity').value||1),details='';if(s.type==='area'){let w=+document.getElementById('width').value,h=+document.getElementById('height').value;if(!(w>0&&h>0)){alert('Enter width and height greater than zero.');return}let wu=document.getElementById('widthUnit').value,hu=document.getElementById('heightUnit').value,area=toFeet(w,wu)*toFeet(h,hu);details=`${w} ${wu} × ${h} ${hu} (${area.toFixed(3)} sq. ft. each)`}else details=s.type==='fixed'?'Fixed job price':`${q} ${s.unit}`;cart.push({id:uid(),name:s.name,details:details+(document.getElementById('jobNotes').value?' · '+document.getElementById('jobNotes').value:''),qty:q,amount:calcCache});document.getElementById('jobNotes').value='';renderCart()};
 function renderCart(){let rows=document.getElementById('cartRows');rows.innerHTML=cart.length?cart.map(i=>`<tr><td>${esc(i.name)}<br><span class="small">${esc(i.details)}</span></td><td>${i.qty}</td><td>${money(i.amount)}</td><td><button class="btn danger" onclick="removeCart('${i.id}')">×</button></td></tr>`).join(''):'<tr><td colspan="4" class="empty">No items added.</td></tr>';let sum=cart.reduce((a,x)=>a+x.amount,0)-Math.max(0,+document.getElementById('quoteDiscount').value||0);document.getElementById('quoteTotal').textContent=money(Math.max(0,sum))}
 function removeCart(id){cart=cart.filter(x=>x.id!==id);renderCart()}
@@ -740,25 +740,14 @@ document.getElementById('saveExpense').onclick=()=>{let desc=document.getElement
 function deleteExpense(id){if(!requireOwner())return;if(confirm('Delete this expense?')){biz().expenses=biz().expenses.filter(x=>x.id!==id);save();renderExpenses()}}
 function renderCustomers(){let b=biz(),m={};b.invoices.forEach(i=>{let k=i.customer+'|'+i.phone;if(!m[k])m[k]={name:i.customer,phone:i.phone,count:0,total:0,balance:0};m[k].count++;m[k].total+=i.total;m[k].balance+=balance(i)});document.getElementById('customerRows').innerHTML=Object.values(m).map(c=>`<tr><td>${esc(c.name)}</td><td>${esc(c.phone)}</td><td>${c.count}</td><td>${money(c.total)}</td><td>${money(c.balance)}</td></tr>`).join('')||'<tr><td colspan="5" class="empty">Customers will appear after invoices are created.</td></tr>'}
 function renderReports(){let b=biz(),inv=b.invoices.reduce((s,i)=>s+i.total,0),received=b.receipts.reduce((s,r)=>s+r.amount,0),out=b.invoices.reduce((s,i)=>s+balance(i),0),ex=b.expenses.reduce((s,x)=>s+x.amount,0);[['rInvoiced',inv],['rReceived',received],['rOutstanding',out],['rExpenses',ex]].forEach(([id,v])=>document.getElementById(id).textContent=money(v));document.getElementById('reportSummary').innerHTML=`<div class="line"><span>Number of invoices</span><b>${b.invoices.length}</b></div><div class="line"><span>Number of receipts</span><b>${b.receipts.length}</b></div><div class="line"><span>Net cash movement (payments less expenses)</span><b>${money(received-ex)}</b></div>`}
-function renderUsers(){let b=biz();document.getElementById('userRows').innerHTML=b.users.map(u=>`<tr><td>${esc(u.name)}</td><td>${esc(u.username)}</td><td>${esc(u.role)}</td><td><button class="btn secondary" onclick="editUser('${u.id}')">Edit details / PIN</button> ${u.id===db.activeUser?'<span class="small">Current user</span>':u.role==='Owner'?'':`<button class="btn danger" onclick="removeUser('${u.id}')">Remove</button>`}</td></tr>`).join('')}
+function renderUsers(){let b=biz();document.getElementById('userRows').innerHTML=b.users.map(u=>`<tr><td>${esc(u.name)}</td><td>${esc(u.username)}</td><td>${esc(u.role)}</td><td>${u.role==='Owner'?'Owner account':`<button class="btn danger" onclick="removeUser('${u.id}')">Remove</button>`}</td></tr>`).join('')}
 document.getElementById('addUser').onclick=()=>{if(!requireOwner())return;let b=biz(),name=document.getElementById('newUserName').value.trim(),username=document.getElementById('newUsername').value.trim(),pin=document.getElementById('newUserPin').value;if(!name||!username||!/^\d{4,8}$/.test(pin)){alert('Enter name, username and a 4–8 digit PIN.');return}if(b.users.some(u=>u.username.toLowerCase()===username.toLowerCase())){alert('That username already exists.');return}b.users.push({id:uid(),name,username,pin,role:document.getElementById('newUserRole').value});save();renderUsers();['newUserName','newUsername','newUserPin'].forEach(x=>document.getElementById(x).value='')};
-function editUser(id){if(!requireOwner())return;let u=biz().users.find(x=>x.id===id);if(!u)return;document.getElementById('editUserId').value=u.id;document.getElementById('editUserName').value=u.name;document.getElementById('editUsername').value=u.username;document.getElementById('editUserPin').value='';document.getElementById('editUserPin').placeholder='Leave blank to keep current PIN';document.getElementById('editUserRole').value=u.role;document.getElementById('userEditorTitle').textContent=u.role==='Owner'?'Edit Owner Details':'Edit User Details';const panel=document.getElementById('userEditor');panel.hidden=false;panel.scrollIntoView({behavior:'smooth',block:'nearest'});document.getElementById('editUserName').focus();}
-document.getElementById('saveUserEdit').onclick=()=>{if(!requireOwner())return;let b=biz(),id=document.getElementById('editUserId').value,u=b.users.find(x=>x.id===id);if(!u)return;let name=document.getElementById('editUserName').value.trim(),username=document.getElementById('editUsername').value.trim(),pin=document.getElementById('editUserPin').value,roleName=document.getElementById('editUserRole').value;if(!name||!username){alert('Enter the full name and username.');return}if(b.users.some(x=>x.id!==id&&x.username.toLowerCase()===username.toLowerCase())){alert('That username is already in use.');return}if(pin&&!/^\d{4,8}$/.test(pin)){alert('PIN must contain 4–8 digits.');return}if(u.id===db.activeUser&&roleName!=='Owner'&&b.users.filter(x=>x.role==='Owner').length<=1){alert('You cannot remove the only Owner privilege from the active account.');return}u.name=name;u.username=username;if(pin)u.pin=pin;u.role=roleName;save();renderUsers();refreshShell();document.getElementById('userEditor').hidden=true;alert('User details updated successfully.');};
-document.getElementById('cancelUserEdit').onclick=()=>{document.getElementById('userEditor').hidden=true;};
 function removeUser(id){if(!requireOwner())return;if(confirm('Remove this user?')){biz().users=biz().users.filter(u=>u.id!==id);save();renderUsers();refreshShell()}}
 function renderBusiness(){let p=biz().profile;[['bName','name'],['bPhone','phone'],['bWhatsapp','whatsapp'],['bEmail','email'],['bAddress','address'],['bCurrency','currency']].forEach(([id,k])=>document.getElementById(id).value=p[k]||'')}
 document.getElementById('saveBusiness').onclick=()=>{if(!requireOwner())return;let p=biz().profile;[['bName','name'],['bPhone','phone'],['bWhatsapp','whatsapp'],['bEmail','email'],['bAddress','address'],['bCurrency','currency']].forEach(([id,k])=>p[k]=document.getElementById(id).value.trim());save();refreshShell();alert('Business profile saved.')};
 document.getElementById('addBusiness').onclick=()=>{if(!requireOwner())return;let name=document.getElementById('newBusinessName').value.trim();if(!name){alert('Enter a business name.');return}let b=newBusiness(name);db.businesses.push(b);db.activeBusiness=b.id;db.activeUser=null;save();document.getElementById('newBusinessName').value='';refreshShell();showLogin()};
 document.getElementById('exportBackup').onclick=()=>{let blob=new Blob([JSON.stringify(db,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Print-Manager-Backup-'+today()+'.json';a.click();URL.revokeObjectURL(a.href)};
 document.getElementById('importBackup').onchange=e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let d=JSON.parse(r.result);if(!Array.isArray(d.businesses)||!d.businesses.length)throw Error();if(confirm('Replace all current local businesses and records with this backup?')){db=d;save();refreshShell();showLogin();alert('Backup restored.')}}catch(err){alert('Invalid backup file.')}e.target.value=''};r.readAsText(f)};
-
-// Select Service panel can be collapsed to give more room to job details and quotations.
-const servicePanel=document.getElementById('servicePanel');
-const serviceCollapseToggle=document.getElementById('serviceCollapseToggle');
-let servicePanelCollapsed=localStorage.getItem('calabash_service_panel_collapsed')==='true';
-function applyServicePanelState(){servicePanel.classList.toggle('is-collapsed',servicePanelCollapsed);serviceCollapseToggle.textContent=servicePanelCollapsed?'Expand ▼':'Collapse ▲';serviceCollapseToggle.setAttribute('aria-expanded',String(!servicePanelCollapsed));serviceCollapseToggle.setAttribute('aria-label',servicePanelCollapsed?'Expand service selector':'Collapse service selector');}
-serviceCollapseToggle.addEventListener('click',()=>{servicePanelCollapsed=!servicePanelCollapsed;localStorage.setItem('calabash_service_panel_collapsed',String(servicePanelCollapsed));applyServicePanelState();});
-applyServicePanelState();
 
 // Calabash theme preference. This does not alter business records or page workflows.
 const themeToggle=document.getElementById('themeToggle');
@@ -767,91 +756,53 @@ function applyCalabashTheme(){document.body.classList.toggle('dark',calabashThem
 themeToggle.addEventListener('click',()=>{calabashTheme=calabashTheme==='dark'?'light':'dark';localStorage.setItem('calabash_theme',calabashTheme);applyCalabashTheme()});
 applyCalabashTheme();
 
+
+// First-run business setup. Existing installations and their stored records are not changed.
+const setupLayer=document.getElementById('firstSetup');
+const setupServices=document.getElementById('setupServices');
+function addSetupService(){
+  const row=document.createElement('div');
+  row.className='panel setup-service-row';
+  row.style.cssText='padding:14px;border:1px solid #e5e7eb;border-radius:12px;background:#fcfcfd';
+  row.innerHTML=`<div class="formgrid">
+    <div><label>Service name *</label><input class="ss-name" required placeholder="e.g. Banner printing"></div>
+    <div><label>Category</label><input class="ss-category" placeholder="e.g. Large format"></div>
+    <div><label>Pricing method</label><select class="ss-type"><option value="area">Per square foot</option><option value="unit">Per item / page</option><option value="fixed">Fixed job price</option></select></div>
+    <div><label>Rate</label><input class="ss-rate" type="number" min="0" step="0.01" value="0"></div>
+    <div><label>Minimum charge</label><input class="ss-min" type="number" min="0" step="0.01" value="0"></div>
+    <div><label>Unit name</label><input class="ss-unit" value="piece" placeholder="piece, page, set"></div>
+  </div><div style="display:flex;justify-content:flex-end;margin-top:8px"><button type="button" class="btn danger ss-remove">Remove service</button></div>`;
+  row.querySelector('.ss-remove').onclick=()=>row.remove();
+  setupServices.appendChild(row);
+}
+document.getElementById('setupAddService').addEventListener('click',addSetupService);
+document.getElementById('firstSetupForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const businessName=document.getElementById('setupBusiness').value.trim();
+  const ownerName=document.getElementById('setupOwner').value.trim();
+  const username=document.getElementById('setupUsername').value.trim();
+  const pin=document.getElementById('setupPin').value.trim();
+  if(!businessName||!ownerName||!username||!/^\d{4,}$/.test(pin)){alert('Please enter the required details. Your PIN must contain at least 4 digits.');return}
+  const rows=[...setupServices.querySelectorAll('.setup-service-row')];
+  const names=rows.map(r=>r.querySelector('.ss-name').value.trim()).filter(Boolean);
+  if(rows.some(r=>!r.querySelector('.ss-name').value.trim())){alert('Please enter a name for each service row or remove the empty row.');return}
+  if(new Set(names.map(n=>n.toLowerCase())).size!==names.length){alert('Each service must have a unique name.');return}
+  const b=biz();
+  b.profile={name:businessName,phone:document.getElementById('setupPhone').value.trim(),whatsapp:document.getElementById('setupWhatsapp').value.trim(),email:document.getElementById('setupEmail').value.trim(),address:document.getElementById('setupAddress').value.trim(),currency:document.getElementById('setupCurrency').value.trim()||'GH₵'};
+  b.services=rows.map(r=>({id:uid(),name:r.querySelector('.ss-name').value.trim(),category:r.querySelector('.ss-category').value.trim(),type:r.querySelector('.ss-type').value,rate:Number(r.querySelector('.ss-rate').value)||0,min:Number(r.querySelector('.ss-min').value)||0,unit:r.querySelector('.ss-unit').value.trim()||'piece',emoji:'🧾'}));
+  b.users=[{id:uid(),name:ownerName,username,pin,role:'Owner'}];
+  db.setupComplete=true;db.activeUser=b.users[0].id;save();setupLayer.style.display='none';hideLogin();refreshShell();renderCart();go('dashboard');window.scrollTo(0,0);
+});
+function showFirstSetup(){setupLayer.style.display='block';document.getElementById('login').style.display='none'}
+
 // Restore a valid signed-in session; otherwise show the sign-in screen.
 try{if(!Array.isArray(biz().users))biz().users=[];['services','quotes','invoices','receipts','expenses'].forEach(k=>{if(!Array.isArray(biz()[k]))biz()[k]=[]});}catch(initErr){console.error('Calabash startup data check:',initErr)}
 refreshShell();renderCart();
-const savedUser=(biz().users||[]).find(u=>u.id===db.activeUser);
-if(savedUser){hideLogin();document.getElementById('currentUser').textContent=savedUser.name+' · '+savedUser.role;go('dashboard')}else{db.activeUser=null;save();showLogin();go('dashboard')}
-</script>
-
-<script>
-// Register Calabash offline support when served from HTTPS or localhost.
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./service-worker.js', { scope: './' })
-      .catch(error => console.warn('Calabash offline setup could not start:', error));
-  });
+if(calabashFreshInstall||db.setupComplete===false){showFirstSetup();}
+else{
+  const savedUser=(biz().users||[]).find(u=>u.id===db.activeUser);
+  if(savedUser){hideLogin();document.getElementById('currentUser').textContent=savedUser.name+' · '+savedUser.role;go('dashboard')}
+  else{db.activeUser=null;save();showLogin();go('dashboard')}
 }
 </script>
-
 </body></html>
-<style id="calabash-live-price-upgrade">
-.live-calc-total{margin:10px 0 14px!important;padding:12px 14px!important;position:sticky;top:8px;z-index:3;box-shadow:0 3px 12px rgba(20,30,20,.08)}
-.live-calc-total span{font-size:12px;font-weight:700;color:#315b48}
-.live-calc-total strong{font-size:30px!important;line-height:1.15;margin-top:4px!important}
-body.dark .live-calc-total span{color:#c2ead8}
-</style>
-
-<style id="calabash-motion-and-inline-editor">
-/* Smooth, restrained motion throughout the app */
-@keyframes calabashPageIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
-@keyframes calabashSoftIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-.page.active{animation:calabashPageIn .28s ease-out both}
-.panel,.stat,.tablewrap,.service,.notice,.help-grid>div{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
-.panel:hover,.stat:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(40,30,60,.08)}
-button,.btn{transition:transform .16s ease,filter .16s ease,box-shadow .16s ease,background-color .16s ease}
-button:hover,.btn:hover{filter:brightness(1.04)}
-button:active,.btn:active{transform:scale(.98)}
-input,select,textarea{transition:border-color .18s ease,box-shadow .18s ease}
-input:focus,select:focus,textarea:focus{outline:none;box-shadow:0 0 0 3px rgba(159,18,57,.12)}
-.service:hover{transform:translateY(-2px);box-shadow:0 5px 14px rgba(80,40,90,.1)}
-.user-editor:not([hidden]){animation:calabashSoftIn .22s ease-out both}
-.user-editor[hidden]{display:none!important}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
-</style>
-
-<style id="calabash-calculator-panel-colours">
-/* Distinct, coordinated surfaces for the three calculator stages */
-.calculator-layout .service-panel{
-  background:linear-gradient(135deg,#fff4f5 0%,#fffafb 100%);
-  border:1px solid #f3cbd2;
-  box-shadow:0 4px 16px rgba(159,18,57,.055);
-}
-.calculator-bottom .job-panel{
-  background:linear-gradient(145deg,#f1f7ff 0%,#fbfdff 100%);
-  border:1px solid #cbdcf3;
-  box-shadow:0 4px 16px rgba(40,90,150,.055);
-}
-.calculator-bottom .quotation-panel{
-  background:linear-gradient(145deg,#effaf5 0%,#fbfefc 100%);
-  border:1px solid #c8e7d7;
-  box-shadow:0 4px 16px rgba(30,120,75,.055);
-}
-.calculator-layout .service-panel>h3{background:rgba(190,18,59,.075);color:#8f1236;border-bottom:1px solid #f0c6cf}
-.calculator-bottom .job-panel>h3{background:rgba(48,105,175,.075);color:#28578e;border-bottom:1px solid #d5e3f5}
-.calculator-bottom .quotation-panel>h3{background:rgba(34,130,82,.075);color:#216b47;border-bottom:1px solid #d1e9dc}
-.calculator-layout .service-panel .pad,
-.calculator-bottom .job-panel .pad,
-.calculator-bottom .quotation-panel .pad{background:transparent}
-.calculator-layout .service-panel .service{border-color:#efd3d9}
-.calculator-layout .service-panel .service.active{border-color:#9f1239;box-shadow:0 0 0 2px rgba(159,18,57,.12)}
-.calculator-bottom .job-panel input,
-.calculator-bottom .job-panel select,
-.calculator-bottom .quotation-panel input,
-.calculator-bottom .quotation-panel select{background:rgba(255,255,255,.92)}
-.calculator-bottom .job-panel .rate{background:rgba(255,255,255,.68);border:1px solid #d9e6f5;border-radius:10px;padding:10px 12px}
-.calculator-bottom .quotation-panel .tablewrap{background:rgba(255,255,255,.72);border-radius:9px}
-body.dark .calculator-layout .service-panel{background:linear-gradient(135deg,#351d27,#2b2026);border-color:#663545}
-body.dark .calculator-bottom .job-panel{background:linear-gradient(145deg,#1d2b3d,#202733);border-color:#354d6b}
-body.dark .calculator-bottom .quotation-panel{background:linear-gradient(145deg,#1d3329,#202b27);border-color:#365b48}
-body.dark .calculator-layout .service-panel>h3{background:rgba(190,18,59,.16);color:#ffb7c7;border-color:#663545}
-body.dark .calculator-bottom .job-panel>h3{background:rgba(65,130,205,.16);color:#b8d8ff;border-color:#354d6b}
-body.dark .calculator-bottom .quotation-panel>h3{background:rgba(45,155,95,.16);color:#b8f0ce;border-color:#365b48}
-body.dark .calculator-bottom .job-panel input,
-body.dark .calculator-bottom .job-panel select,
-body.dark .calculator-bottom .quotation-panel input,
-body.dark .calculator-bottom .quotation-panel select{background:#20232b;color:var(--ink)}
-body.dark .calculator-bottom .job-panel .rate,
-body.dark .calculator-bottom .quotation-panel .tablewrap{background:rgba(15,18,24,.35);border-color:#3d4a5b}
-@media(prefers-reduced-motion:no-preference){.calculator-layout .service-panel,.calculator-bottom .job-panel,.calculator-bottom .quotation-panel{transition:background .25s ease,border-color .25s ease,box-shadow .25s ease}}
-</style>
