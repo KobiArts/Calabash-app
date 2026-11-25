@@ -1,4 +1,4 @@
-const CACHE_NAME = "calabash-v2";
+const CACHE_NAME = "calabash-v3";
 const APP_FILES = [
   "./",
   "./index.html",

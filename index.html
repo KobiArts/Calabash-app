@@ -590,6 +590,10 @@ input,select,textarea { font-size:16px !important; }
   font-weight: 500 !important;
 }
 </style>
+
+<style id="calabash-guided-setup-style">
+#firstSetup .setup-service-row label{font-size:12px}#firstSetup .setup-service-row input[type=number],#firstSetup .setup-service-row select{padding:8px;font-size:13px}#firstSetup button:disabled{cursor:not-allowed}@media(max-width:700px){#firstSetup{padding:8px!important}#firstSetup form{padding:16px!important}#firstSetup .setup-service-row{grid-template-columns:1fr 1fr!important}#firstSetup .setup-service-row>div:first-child{grid-column:1/-1}#firstSetup .formgrid{grid-template-columns:1fr 1fr}}
+</style>
 </head><body>
 <header><div class="brand"><div><h1 id="brandTitle">CALABASH</h1><small>Smart printing, seamless control.</small></div></div><div class="headright"><select id="businessSwitch" aria-label="Business profile"><option value="n5q6gwgfmwt43vsi" selected="">KOBIART STUDIO</option></select><span id="currentUser" style="font-size:12px">Owner · Owner</span><button class="icon-action" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"><span aria-hidden="true">☾</span></button><button class="icon-action logout-icon" id="logoutBtn" type="button" aria-label="Log out" title="Log out"><span aria-hidden="true">↪</span></button></div></header>
 <div class="shell"><aside class="no-print">
@@ -621,51 +625,34 @@ input,select,textarea { font-size:16px !important; }
 <section id="printstage" class="page"></section>
 </main></div><footer><span>Offline Printing Business Manager</span><span id="footerBusiness">KOBIART STUDIO</span></footer>
 
-<div id="firstSetup" style="display:none;position:fixed;inset:0;z-index:30;overflow:auto;background:linear-gradient(135deg,#f8f9fc,#fff0f4);padding:28px 16px">
-  <div style="max-width:900px;margin:0 auto;background:#fff;border:1px solid #e6e8ee;border-radius:18px;box-shadow:0 18px 55px #252b381c;overflow:hidden">
-    <div style="padding:25px 28px;background:linear-gradient(110deg,#a5123f,#d64b70);color:#fff">
-      <div style="font-size:12px;font-weight:800;letter-spacing:1.4px;opacity:.9">CALABASH · FIRST-TIME SETUP</div>
-      <h1 style="margin:8px 0 4px;font-size:27px">Set up your printing business</h1>
-      <p style="margin:0;opacity:.9">Add your business details and create your own service list and prices.</p>
-    </div>
-    <form id="firstSetupForm" style="padding:24px 28px">
-      <h2 style="font-size:19px;margin:0 0 5px">1. Business information</h2>
-      <p class="muted">These details can be changed later in Business Profile.</p>
-      <div class="formgrid">
-        <div><label for="setupBusiness">Business name *</label><input id="setupBusiness" required placeholder="e.g. Bright Prints"></div>
-        <div><label for="setupPhone">Phone number</label><input id="setupPhone" placeholder="Business phone"></div>
-        <div><label for="setupWhatsapp">WhatsApp</label><input id="setupWhatsapp" placeholder="WhatsApp number"></div>
-        <div><label for="setupEmail">Email</label><input id="setupEmail" type="email" placeholder="Business email"></div>
-        <div><label for="setupCurrency">Currency symbol/code</label><input id="setupCurrency" value="GH₵" placeholder="GH₵"></div>
-        <div><label for="setupAddress">Business address</label><input id="setupAddress" placeholder="Business address"></div>
-      </div>
-      <hr style="border:0;border-top:1px solid #eceef1;margin:24px 0">
-      <h2 style="font-size:19px;margin:0 0 5px">2. Owner account</h2>
-      <p class="muted">Create the owner profile and PIN used to sign in on this device.</p>
-      <div class="formgrid">
-        <div><label for="setupOwner">Owner's name *</label><input id="setupOwner" required placeholder="Your name"></div>
-        <div><label for="setupUsername">Username *</label><input id="setupUsername" required autocomplete="username" placeholder="Choose a username"></div>
-        <div><label for="setupPin">Create PIN *</label><input id="setupPin" required type="password" inputmode="numeric" minlength="4" placeholder="At least 4 digits"></div>
-      </div>
-      <hr style="border:0;border-top:1px solid #eceef1;margin:24px 0">
-      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap">
-        <div><h2 style="font-size:19px;margin:0 0 5px">3. Set up your services and prices</h2><p class="muted" style="margin:0">Start with a blank list. Add only the services your business offers.</p></div>
-        <button type="button" class="btn secondary" id="setupAddService">＋ Add service</button>
-      </div>
-      <div id="setupServices" style="display:grid;gap:10px;margin-top:15px"></div>
-      <div class="notice" style="margin-top:16px">You can finish setup with no services and add them later. Prices can also be edited any time under Services &amp; Materials.</div>
-      <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:22px">
-        <button type="submit" class="btn primary" style="min-width:170px">Finish Setup →</button>
-      </div>
-    </form>
-  </div>
+<div id="firstSetup" style="display:none;position:fixed;inset:0;z-index:30;overflow:auto;background:linear-gradient(135deg,#f5f7fa,#fff0f4);padding:22px 14px">
+ <div style="max-width:980px;margin:0 auto;background:#fff;border:1px solid #e3e7ed;border-radius:18px;box-shadow:0 18px 55px #252b381c;overflow:hidden">
+  <div style="padding:23px 28px;background:linear-gradient(110deg,#243447,#b4234d);color:#fff"><div style="font-size:12px;font-weight:800;letter-spacing:1.4px">CALABASH · FIRST-TIME SETUP</div><h1 style="margin:8px 0 4px;font-size:27px">Let's set up your printing business</h1><p style="margin:0;opacity:.92">We'll guide you through your business details and the services you offer.</p></div>
+  <form id="firstSetupForm" style="padding:22px 28px">
+   <section class="setup-step" id="setupStepBusiness"><h2 style="font-size:19px;margin:0 0 5px">Step 1 · Business information</h2><p class="muted">Enter the details customers should see on quotations and invoices.</p><div class="formgrid"><div><label for="setupBusiness">Business name *</label><input id="setupBusiness" required placeholder="e.g. Bright Prints"></div><div><label for="setupPhone">Phone number</label><input id="setupPhone" placeholder="Business phone"></div><div><label for="setupWhatsapp">WhatsApp</label><input id="setupWhatsapp" placeholder="WhatsApp number"></div><div><label for="setupEmail">Email</label><input id="setupEmail" type="email" placeholder="Business email"></div><div><label for="setupCurrency">Currency symbol/code</label><input id="setupCurrency" value="GH₵"></div><div><label for="setupAddress">Business address</label><input id="setupAddress" placeholder="Business address"></div></div><hr style="border:0;border-top:1px solid #eceef1;margin:22px 0"><h2 style="font-size:19px;margin:0 0 5px">Owner account</h2><p class="muted">Create the owner profile and PIN used to sign in on this device.</p><div class="formgrid"><div><label for="setupOwner">Owner's name *</label><input id="setupOwner" required placeholder="Your name"></div><div><label for="setupUsername">Username *</label><input id="setupUsername" required autocomplete="username" placeholder="Choose a username"></div><div><label for="setupPin">Create PIN *</label><input id="setupPin" required type="password" inputmode="numeric" minlength="4" placeholder="At least 4 digits"></div></div><div class="notice">Next, Calabash will take you through the printing service catalogue. All prices begin at GH₵0.00 for you to enter your own rates.</div><div style="display:flex;justify-content:flex-end;margin-top:20px"><button type="button" class="btn primary" id="setupBusinessNext">Continue to services →</button></div></section>
+   <section class="setup-step" id="setupStepServices" style="display:none"><div style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap"><div><h2 style="font-size:19px;margin:0 0 5px">Step 2 · Configure your printing services</h2><p class="muted" style="margin:0">Review each category. Keep the services you offer, set your rates, or untick services you don't provide.</p></div><div id="setupProgressLabel" class="pill">Category 1 of 6</div></div><div style="height:8px;background:#edf0f4;border-radius:20px;margin:15px 0;overflow:hidden"><div id="setupProgressBar" style="height:100%;width:0;background:#b4234d;border-radius:20px;transition:width .2s"></div></div><div class="panel" style="border:1px solid #dce3eb;border-radius:12px"><div style="padding:15px 17px;background:#f1f4f8"><h3 id="setupCategoryTitle" style="margin:0;color:#243447;font-size:18px">Large-format printing</h3><p id="setupCategoryHelp" class="muted" style="margin:5px 0 0"></p></div><div id="setupServices" style="display:grid;gap:10px;padding:14px"></div></div><div class="notice" style="margin-top:12px">Pricing guide: choose <b>Per square foot</b> for measured flex, stickers and banners; <b>Per item/page</b> for photocopying and individual printed pieces; or <b>Fixed job</b> for design and jobs charged as one amount. You can change these settings later.</div><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:18px"><button type="button" class="btn secondary" id="setupBackCategory">← Previous</button><div style="display:flex;gap:9px;flex-wrap:wrap"><button type="button" class="btn secondary" id="setupSkipCategory">Skip this category</button><button type="button" class="btn primary" id="setupNextCategory">Next category →</button></div></div><div id="setupFinishWrap" style="display:none;margin-top:18px"><div class="notice">You have reached the end of the catalogue. You can go back to review any category before finishing.</div><button type="submit" class="btn primary full" style="padding:13px">Finish setup and open Calabash →</button></div></section>
+  </form>
+ </div>
 </div>
 
 <div id="login" style="display: none;"><div class="box"><h2>Welcome to Calabash</h2><p class="login-subtitle">PRINTING BUSINESS MANAGER</p><p class="muted">Choose a user profile and enter the PIN.</p><label>User profile</label><select id="loginUser"><option value="g048exq0mwt43vsi">Owner (owner)</option><option value="bsr8v1zumwt6ub43">KWABENA DANSOH (KOBI)</option></select><label>PIN</label><input id="loginPin" type="password" placeholder="Enter PIN"><button class="btn primary full" id="loginBtn">Sign In</button><p class="small">First-time default: Owner profile, PIN 1234. Change this after signing in.</p></div></div>
 <script>
 const STORE='kobiart_print_manager_v3';
-const seedServices=[
-['Banner Printing','Large Format','area',0,0,'sq. ft.','🖨️'],['Sticker Printing','Large Format','area',0,0,'sq. ft.','🏷️'],['Flex Printing','Large Format','area',0,0,'sq. ft.','🎨'],['One-way Vision','Large Format','area',0,0,'sq. ft.','🪟'],['A4 Colour Printing','Digital Printing','unit',0,0,'page','📄'],['A4 Black & White','Digital Printing','unit',0,0,'page','📃'],['A3 Colour Printing','Digital Printing','unit',0,0,'page','🗎'],['Photocopy','Photocopy','unit',0,0,'page','📠'],['Lamination','Finishing','unit',0,0,'piece','🛡️'],['Binding','Finishing','unit',0,0,'piece','📚'],['Passport Photos','Photography','unit',0,0,'set','📷'],['Typing','Other Services','unit',0,0,'page','⌨️'],['Graphic Design','Design','fixed',0,0,'job','🖌️']];
+const setupCatalogue=[
+{category:'Large-format printing',help:'Services commonly printed on flex, vinyl, sticker and wide-format media. Measured jobs are usually priced per square foot.',items:[
+['Flex Banner Printing','area','sq. ft.','🎨'],['Frontlit Flex Printing','area','sq. ft.','🖨️'],['Backlit Flex Printing','area','sq. ft.','💡'],['Sticker Printing','area','sq. ft.','🏷️'],['Die-cut Sticker Printing','area','sq. ft.','✂️'],['Transparent / Clear Sticker','area','sq. ft.','🏷️'],['Product Label Printing','area','sq. ft.','🏷️'],['One-way Vision Printing','area','sq. ft.','🪟'],['Window Graphics','area','sq. ft.','🪟'],['Vehicle Branding','area','sq. ft.','🚗'],['Wallpaper / Wall Graphics','area','sq. ft.','🧱'],['Canvas Printing','area','sq. ft.','🖼️'],['Roll-up Banner Printing','unit','piece','🪧'],['X-banner Printing','unit','piece','🪧'],['Backlit Film Printing','area','sq. ft.','💡'],['Photo / Large Poster Printing','area','sq. ft.','🖼️']]},
+{category:'Photocopying & digital printing',help:'Set a price for each copy, sheet or page. A4 and A3 colour and black-and-white services are listed separately.',items:[
+['A4 Black & White Photocopy','unit','page','📄'],['A4 Colour Photocopy','unit','page','🌈'],['A3 Black & White Photocopy','unit','page','📄'],['A3 Colour Photocopy','unit','page','🌈'],['A4 Black & White Printing','unit','page','🖨️'],['A4 Colour Printing','unit','page','🖨️'],['A3 Black & White Printing','unit','page','🖨️'],['A3 Colour Printing','unit','page','🖨️'],['Photo Printing','unit','piece','📷'],['Document Scanning','unit','page','📑'],['Document Typing','unit','page','⌨️'],['Email / File Printing','unit','page','📧'],['ID Card Printing','unit','piece','🪪']]},
+{category:'Business & commercial printing',help:'Printed products such as cards, flyers, brochures and office stationery. Use per item for unit pricing or fixed job for a complete batch.',items:[
+['Business Cards','unit','card','💳'],['Flyer Printing','unit','piece','📃'],['Poster Printing','unit','piece','🖼️'],['Brochure Printing','unit','piece','📖'],['Booklet Printing','unit','copy','📘'],['Company Profile Printing','fixed','job','📚'],['Letterhead Printing','unit','sheet','📄'],['Envelope Printing','unit','piece','✉️'],['Receipt Book Printing','unit','book','🧾'],['Invoice Book Printing','unit','book','🧾'],['Delivery Note Book Printing','unit','book','📒'],['Quotation Book Printing','unit','book','📒'],['NCR / Duplicate Book Printing','unit','book','📒'],['Programme Printing','unit','copy','📖'],['Invitation Card Printing','unit','card','💌'],['Wedding / Funeral Brochure','unit','copy','📖'],['Calendar Printing','unit','piece','🗓️'],['Certificate Printing','unit','piece','📜'],['Menu Printing','unit','piece','🍽️'],['Label Printing','unit','piece','🏷️'],['Custom Paper Bag Printing','unit','piece','🛍️']]},
+{category:'Finishing & post-press services',help:'Finishing is usually priced per sheet, piece, book or job. Select the unit that matches how you charge.',items:[
+['A4 Lamination','unit','sheet','🛡️'],['A3 Lamination','unit','sheet','🛡️'],['ID Card Lamination','unit','card','🪪'],['Comb Binding','unit','book','📚'],['Spiral Binding','unit','book','📚'],['Perfect Binding','unit','book','📚'],['Booklet Stapling','unit','copy','📎'],['Paper Cutting / Trimming','fixed','job','✂️'],['Creasing','unit','piece','📏'],['Folding','unit','piece','📄'],['Numbering','unit','sheet','🔢'],['Eyelet Fixing','unit','piece','⭕'],['Mounting','area','sq. ft.','🖼️'],['Foam Board Mounting','area','sq. ft.','🖼️'],['Punching','unit','sheet','📌'],['Perforation','unit','piece','〰️']]},
+{category:'Graphic design & creative services',help:'Design work is commonly charged as a fixed job. You may also charge per page or per design item.',items:[
+['Logo Design','fixed','job','✏️'],['Business Card Design','fixed','job','💳'],['Flyer / Poster Design','fixed','job','🎨'],['Banner / Flex Design','fixed','job','🖌️'],['Brochure Design','fixed','job','📖'],['Invitation Card Design','fixed','job','💌'],['Certificate Design','fixed','job','📜'],['Company Profile Design','fixed','job','📚'],['Social Media Design','fixed','design','📱'],['Photo Editing / Retouching','fixed','photo','🖼️'],['Typesetting / Layout','fixed','job','⌨️'],['Passport Photo Capture','unit','set','📷']]},
+{category:'Other printing & custom jobs',help:'Add other services your press offers. These examples are optional and can be edited or removed after setup.',items:[
+['T-shirt Printing','unit','piece','👕'],['Mug Printing','unit','piece','☕'],['Cap Printing','unit','piece','🧢'],['Souvenir / Gift Branding','fixed','job','🎁'],['Heat Transfer Printing','area','sq. ft.','♨️'],['Screen Printing','unit','piece','🖨️'],['Rubber Stamp','unit','piece','🔖'],['Signage Production','area','sq. ft.','🪧'],['Custom Printing Job','fixed','job','🧾']]}
+];
+const seedServices=setupCatalogue.flatMap(c=>c.items.map(a=>[a[0],c.category,a[1],0,0,a[2],a[3]]));
 const uid=()=>Math.random().toString(36).slice(2,10)+Date.now().toString(36);
 const today=()=>new Date().toISOString().slice(0,10);
 function newBusiness(name){return {id:uid(),profile:{name,phone:'',whatsapp:'',email:'',address:'',currency:'GH₵'},services:seedServices.map(a=>({id:uid(),name:a[0],category:a[1],type:a[2],rate:a[3],min:a[4],unit:a[5],emoji:a[6]})),quotes:[],invoices:[],receipts:[],expenses:[],users:[{id:uid(),name:'Owner',username:'owner',pin:'1234',role:'Owner'}]}}
@@ -757,41 +744,53 @@ themeToggle.addEventListener('click',()=>{calabashTheme=calabashTheme==='dark'?'
 applyCalabashTheme();
 
 
-// First-run business setup. Existing installations and their stored records are not changed.
+// Guided first-run setup. Existing business data is left untouched.
 const setupLayer=document.getElementById('firstSetup');
 const setupServices=document.getElementById('setupServices');
-function addSetupService(){
-  const row=document.createElement('div');
-  row.className='panel setup-service-row';
-  row.style.cssText='padding:14px;border:1px solid #e5e7eb;border-radius:12px;background:#fcfcfd';
-  row.innerHTML=`<div class="formgrid">
-    <div><label>Service name *</label><input class="ss-name" required placeholder="e.g. Banner printing"></div>
-    <div><label>Category</label><input class="ss-category" placeholder="e.g. Large format"></div>
-    <div><label>Pricing method</label><select class="ss-type"><option value="area">Per square foot</option><option value="unit">Per item / page</option><option value="fixed">Fixed job price</option></select></div>
-    <div><label>Rate</label><input class="ss-rate" type="number" min="0" step="0.01" value="0"></div>
-    <div><label>Minimum charge</label><input class="ss-min" type="number" min="0" step="0.01" value="0"></div>
-    <div><label>Unit name</label><input class="ss-unit" value="piece" placeholder="piece, page, set"></div>
-  </div><div style="display:flex;justify-content:flex-end;margin-top:8px"><button type="button" class="btn danger ss-remove">Remove service</button></div>`;
-  row.querySelector('.ss-remove').onclick=()=>row.remove();
+let setupCategoryIndex=0;
+const setupSelected=new Map();
+function renderSetupCategory(){
+ const cat=setupCatalogue[setupCategoryIndex];
+ document.getElementById('setupCategoryTitle').textContent=cat.category;
+ document.getElementById('setupCategoryHelp').textContent=cat.help;
+ document.getElementById('setupProgressLabel').textContent=`Category ${setupCategoryIndex+1} of ${setupCatalogue.length}`;
+ document.getElementById('setupProgressBar').style.width=((setupCategoryIndex+1)/setupCatalogue.length*100)+'%';
+ document.getElementById('setupBackCategory').disabled=setupCategoryIndex===0;
+ document.getElementById('setupBackCategory').style.opacity=setupCategoryIndex===0?'.45':'1';
+ document.getElementById('setupNextCategory').textContent=setupCategoryIndex===setupCatalogue.length-1?'Review completed categories':'Next category →';
+ document.getElementById('setupFinishWrap').style.display=setupCategoryIndex===setupCatalogue.length-1?'block':'none';
+ document.getElementById('setupNextCategory').style.display=setupCategoryIndex===setupCatalogue.length-1?'none':'inline-flex';
+ setupServices.innerHTML='';
+ cat.items.forEach((item,i)=>{
+  const key=setupCategoryIndex+'-'+i, saved=setupSelected.get(key)||{enabled:true,rate:0,min:0,type:item[1],unit:item[2]};
+  const row=document.createElement('div');row.className='setup-service-row';row.style.cssText='display:grid;grid-template-columns:minmax(180px,1.4fr) minmax(130px,1fr) minmax(105px,.7fr) minmax(105px,.7fr);gap:10px;align-items:end;padding:11px;border:1px solid #e4e8ee;border-radius:10px;background:#fff';
+  row.innerHTML=`<div><label style="display:flex;align-items:center;gap:8px;margin:0 0 6px"><input class="ss-enabled" type="checkbox" style="width:auto" ${saved.enabled?'checked':''}> <span>${item[3]} ${item[0]}</span></label><div class="small">${item[2]==='sq. ft.'?'Measured area':item[2]==='job'?'Complete job':'Per '+item[2]}</div></div><div><label>Pricing method</label><select class="ss-type"><option value="area">Per square foot</option><option value="unit">Per item / page</option><option value="fixed">Fixed job</option></select></div><div><label>Rate (GH₵)</label><input class="ss-rate" type="number" min="0" step="0.01" value="${saved.rate}"></div><div><label>Minimum (GH₵)</label><input class="ss-min" type="number" min="0" step="0.01" value="${saved.min}"></div>`;
+  row.querySelector('.ss-type').value=saved.type;
+  const persist=()=>setupSelected.set(key,{enabled:row.querySelector('.ss-enabled').checked,rate:Math.max(0,Number(row.querySelector('.ss-rate').value)||0),min:Math.max(0,Number(row.querySelector('.ss-min').value)||0),type:row.querySelector('.ss-type').value,unit:item[2]});
+  row.querySelectorAll('input,select').forEach(el=>el.addEventListener('change',persist));
   setupServices.appendChild(row);
+ });
 }
-document.getElementById('setupAddService').addEventListener('click',addSetupService);
+function saveVisibleSetupCategory(){
+ const cat=setupCatalogue[setupCategoryIndex];
+ [...setupServices.querySelectorAll('.setup-service-row')].forEach((row,i)=>{const item=cat.items[i];setupSelected.set(setupCategoryIndex+'-'+i,{enabled:row.querySelector('.ss-enabled').checked,rate:Math.max(0,Number(row.querySelector('.ss-rate').value)||0),min:Math.max(0,Number(row.querySelector('.ss-min').value)||0),type:row.querySelector('.ss-type').value,unit:item[2]})});
+}
+document.getElementById('setupBusinessNext').onclick=()=>{
+ const form=document.getElementById('firstSetupForm');
+ for(const id of ['setupBusiness','setupOwner','setupUsername','setupPin']){const el=document.getElementById(id);if(!el.value.trim()){el.focus();alert('Please complete the required business and owner details first.');return}}
+ if(!/^\d{4,}$/.test(document.getElementById('setupPin').value.trim())){alert('Your PIN must contain at least 4 digits.');return}
+ document.getElementById('setupStepBusiness').style.display='none';document.getElementById('setupStepServices').style.display='block';setupCategoryIndex=0;renderSetupCategory();window.scrollTo(0,0);
+};
+document.getElementById('setupBackCategory').onclick=()=>{saveVisibleSetupCategory();if(setupCategoryIndex>0){setupCategoryIndex--;renderSetupCategory()}};
+document.getElementById('setupNextCategory').onclick=()=>{saveVisibleSetupCategory();if(setupCategoryIndex<setupCatalogue.length-1){setupCategoryIndex++;renderSetupCategory()}else{document.getElementById('setupFinishWrap').style.display='block'}};
+document.getElementById('setupSkipCategory').onclick=()=>{saveVisibleSetupCategory();setupCatalogue[setupCategoryIndex].items.forEach((_,i)=>{const x=setupSelected.get(setupCategoryIndex+'-'+i);if(x)x.enabled=false});if(setupCategoryIndex<setupCatalogue.length-1){setupCategoryIndex++;renderSetupCategory()}else{document.getElementById('setupFinishWrap').style.display='block'}};
 document.getElementById('firstSetupForm').addEventListener('submit',e=>{
-  e.preventDefault();
-  const businessName=document.getElementById('setupBusiness').value.trim();
-  const ownerName=document.getElementById('setupOwner').value.trim();
-  const username=document.getElementById('setupUsername').value.trim();
-  const pin=document.getElementById('setupPin').value.trim();
-  if(!businessName||!ownerName||!username||!/^\d{4,}$/.test(pin)){alert('Please enter the required details. Your PIN must contain at least 4 digits.');return}
-  const rows=[...setupServices.querySelectorAll('.setup-service-row')];
-  const names=rows.map(r=>r.querySelector('.ss-name').value.trim()).filter(Boolean);
-  if(rows.some(r=>!r.querySelector('.ss-name').value.trim())){alert('Please enter a name for each service row or remove the empty row.');return}
-  if(new Set(names.map(n=>n.toLowerCase())).size!==names.length){alert('Each service must have a unique name.');return}
-  const b=biz();
-  b.profile={name:businessName,phone:document.getElementById('setupPhone').value.trim(),whatsapp:document.getElementById('setupWhatsapp').value.trim(),email:document.getElementById('setupEmail').value.trim(),address:document.getElementById('setupAddress').value.trim(),currency:document.getElementById('setupCurrency').value.trim()||'GH₵'};
-  b.services=rows.map(r=>({id:uid(),name:r.querySelector('.ss-name').value.trim(),category:r.querySelector('.ss-category').value.trim(),type:r.querySelector('.ss-type').value,rate:Number(r.querySelector('.ss-rate').value)||0,min:Number(r.querySelector('.ss-min').value)||0,unit:r.querySelector('.ss-unit').value.trim()||'piece',emoji:'🧾'}));
-  b.users=[{id:uid(),name:ownerName,username,pin,role:'Owner'}];
-  db.setupComplete=true;db.activeUser=b.users[0].id;save();setupLayer.style.display='none';hideLogin();refreshShell();renderCart();go('dashboard');window.scrollTo(0,0);
+ e.preventDefault();if(document.getElementById('setupStepServices').style.display==='none'){alert('Please continue to the service catalogue and review your services before finishing.');return}saveVisibleSetupCategory();
+ const businessName=document.getElementById('setupBusiness').value.trim(),ownerName=document.getElementById('setupOwner').value.trim(),username=document.getElementById('setupUsername').value.trim(),pin=document.getElementById('setupPin').value.trim();
+ if(!businessName||!ownerName||!username||!/^[0-9]{4,}$/.test(pin)){alert('Please enter the required details. Your PIN must contain at least 4 digits.');document.getElementById('setupStepBusiness').style.display='block';document.getElementById('setupStepServices').style.display='none';return}
+ const services=[];setupCatalogue.forEach((cat,ci)=>cat.items.forEach((item,i)=>{const x=setupSelected.get(ci+'-'+i)||{enabled:true,rate:0,min:0,type:item[1],unit:item[2]};if(x.enabled)services.push({id:uid(),name:item[0],category:cat.category,type:x.type,rate:x.rate,min:x.min,unit:x.unit,emoji:item[3]})}));
+ const b=biz();b.profile={name:businessName,phone:document.getElementById('setupPhone').value.trim(),whatsapp:document.getElementById('setupWhatsapp').value.trim(),email:document.getElementById('setupEmail').value.trim(),address:document.getElementById('setupAddress').value.trim(),currency:document.getElementById('setupCurrency').value.trim()||'GH₵'};
+ b.services=services;b.users=[{id:uid(),name:ownerName,username,pin,role:'Owner'}];db.setupComplete=true;db.activeUser=b.users[0].id;save();setupLayer.style.display='none';hideLogin();refreshShell();renderCart();go('dashboard');window.scrollTo(0,0);
 });
 function showFirstSetup(){setupLayer.style.display='block';document.getElementById('login').style.display='none'}
 
